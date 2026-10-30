@@ -9,7 +9,27 @@
 #define STATUS_LED_PIN        8
 #define STATUS_LED_RGB        false
 #define STATUS_LED_ACTIVE_LOW true
-#else
+#endif
+
+#if defined(BOARD_ESP32C3_ELRSRX)
+// ESP32-C3 ELRS Receiver, single-color LED on GPIO8
+#define FC_RX_PIN             20
+#define FC_TX_PIN             21
+#define STATUS_LED_PIN        8
+#define STATUS_LED_RGB        false
+#define STATUS_LED_ACTIVE_LOW true
+#endif
+
+#if defined(BOARD_ESP32C3_ELRSRGB)
+// ESP32-C3 ELRS Receiver: RGB LED on GPIO8
+#define FC_RX_PIN             20
+#define FC_TX_PIN             21
+#define STATUS_LED_PIN        8
+#define STATUS_LED_RGB        true
+#define STATUS_LED_ACTIVE_LOW false
+#endif
+
+#if defined(BOARD_ESP32S3_ZERO)
 // Waveshare ESP32-S3-Zero: FC UART on GPIO43/44, WS2812 RGB LED on GPIO21
 #define FC_RX_PIN             44
 #define FC_TX_PIN             43
