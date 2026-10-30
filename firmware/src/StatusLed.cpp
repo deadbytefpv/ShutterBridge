@@ -19,7 +19,7 @@ void StatusLed::write(uint8_t r, uint8_t g, uint8_t b) {
     lr_ = r;
     lg_ = g;
     lb_ = b;
-    neopixelWrite(pin_, g, r, b);
+    neopixelWrite(pin_, r, g, b);
 }
 
 void StatusLed::writeMono(bool on) {
