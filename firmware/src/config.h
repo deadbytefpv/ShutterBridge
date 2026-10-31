@@ -17,7 +17,7 @@
 #define FC_TX_PIN             21
 #define STATUS_LED_PIN        8
 #define STATUS_LED_RGB        false
-#define STATUS_LED_ACTIVE_LOW true
+#define STATUS_LED_ACTIVE_LOW false
 #endif
 
 #if defined(BOARD_ESP32C3_ELRSRGB)
